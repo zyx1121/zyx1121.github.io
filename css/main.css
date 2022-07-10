@@ -1,0 +1,98 @@
+:root {
+  --text-color: #ddd;
+  --text-shadow-color: #111;
+  --background-color: #222;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0.1rem 0;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--text-color);
+
+  text-shadow: var(--text-shadow-color) 0em 0.4em 0.15em;
+}
+a:visited {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
+a:active {
+  text-decoration: none;
+  color: var(--text-color);
+
+  position: relative;
+  top: 0.4rem;
+  text-shadow: var(--text-shadow-color) 0em 0.2em 0.1em;
+}
+
+body {
+  overflow: -moz-hidden-unscrollable;
+  -ms-overflow-style: none;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Boutique", sans-serif;
+  user-select: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  color: #444;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "Boutique";
+  src: url(../fonts/BoutiqueBitmap7x7.ttf);
+}
+
+.center {
+  width: 100vw;
+  height: calc(100vh - 3rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-nav {
+  display: grid;
+}
+
+.page-selection {
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.page-selection:after {
+  content: attr(data-text);
+}
+
+.page-selection:hover:after {
+  content: attr(data-hover);
+}
