@@ -56,6 +56,9 @@ body {
   user-select: none;
 }
 body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
   display: none;
 }
 
